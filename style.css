@@ -1,0 +1,35 @@
+/* style.css - modern readable styles with navyish accent (#0b4a6f) */
+:root{
+  --max-width:980px;
+  --accent: #0b4a6f;
+  --muted:#666;
+  --card-bg: #ffffff;
+  --page-bg: #f6f7f8;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{background:var(--page-bg); color:#111; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+.site{max-width:var(--max-width); margin:28px auto; padding:20px;}
+.site-header{background:var(--card-bg); border-radius:var(--radius); padding:18px; box-shadow:0 6px 20px rgba(20,20,30,0.06);}
+.header-inner{display:flex; gap:18px; align-items:center;}
+.portrait{width:120px; height:120px; object-fit:cover; border-radius:8px; border:1px solid #eee; background:#ddd;}
+.title-wrap h1{margin:0; color:var(--accent); font-size:1.6rem;}
+.role{margin:6px 0 0 0; color:var(--muted); font-weight:600;}
+.meta{margin:6px 0 0 0; color:var(--muted); font-size:0.95rem;}
+.main-nav{margin-top:14px; display:flex; gap:12px;}
+.main-nav a{color:var(--accent); text-decoration:none; font-weight:600;}
+.content{margin-top:18px;}
+.section-card{background:var(--card-bg); padding:18px; border-radius:12px; margin-bottom:14px; box-shadow:0 4px 14px rgba(20,20,30,0.04);}
+.section-card h2{color:var(--accent); margin-top:0;}
+.section-card p{line-height:1.65; color:#222; margin:12px 0;}
+.downloads{list-style:none; padding:0; margin:8px 0 0 0;}
+.downloads li{margin-bottom:8px;}
+.downloads a{display:inline-block; padding:8px 12px; border-radius:8px; text-decoration:none; background:var(--accent); color:white; font-weight:600;}
+.site-footer{margin-top:16px; color:var(--muted); font-size:0.95rem; text-align:center;}
+@media (max-width:720px){
+  .header-inner{flex-direction:row; align-items:flex-start;}
+  .portrait{width:84px; height:84px;}
+  .site{padding:12px;}
+  .main-nav{flex-wrap:wrap;}
+}
